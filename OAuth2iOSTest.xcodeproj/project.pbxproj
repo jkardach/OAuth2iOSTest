@@ -11,6 +11,8 @@
 		3D85C1A52A9E530100994A77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D85C1A42A9E530100994A77 /* ContentView.swift */; };
 		3D85C1A72A9E530300994A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D85C1A62A9E530300994A77 /* Assets.xcassets */; };
 		3D85C1AA2A9E530300994A77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D85C1A92A9E530300994A77 /* Preview Assets.xcassets */; };
+		3D85C1B22A9E568600994A77 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D85C1B12A9E568600994A77 /* GoogleSignInSwift */; };
+		3D85C1BB2A9E8BF700994A77 /* GoogleLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D85C1BA2A9E8BF700994A77 /* GoogleLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		3D85C1A42A9E530100994A77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D85C1A62A9E530300994A77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D85C1A92A9E530300994A77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D85C1B32A9E58FA00994A77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3D85C1BA2A9E8BF700994A77 /* GoogleLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D85C1B22A9E568600994A77 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +56,10 @@
 		3D85C1A12A9E530100994A77 /* OAuth2iOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				3D85C1B32A9E58FA00994A77 /* Info.plist */,
 				3D85C1A22A9E530100994A77 /* OAuth2iOSTestApp.swift */,
 				3D85C1A42A9E530100994A77 /* ContentView.swift */,
+				3D85C1BA2A9E8BF700994A77 /* GoogleLoginView.swift */,
 				3D85C1A62A9E530300994A77 /* Assets.xcassets */,
 				3D85C1A82A9E530300994A77 /* Preview Content */,
 			);
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = OAuth2iOSTest;
+			packageProductDependencies = (
+				3D85C1B12A9E568600994A77 /* GoogleSignInSwift */,
+			);
 			productName = OAuth2iOSTest;
 			productReference = 3D85C19F2A9E530100994A77 /* OAuth2iOSTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 3D85C1962A9E530100994A77;
+			packageReferences = (
+				3D85C1B02A9E568600994A77 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 3D85C1A02A9E530100994A77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D85C1A52A9E530100994A77 /* ContentView.swift in Sources */,
+				3D85C1BB2A9E8BF700994A77 /* GoogleLoginView.swift in Sources */,
 				3D85C1A32A9E530100994A77 /* OAuth2iOSTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +284,7 @@
 				DEVELOPMENT_TEAM = NMC4QMEM2Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OAuth2iOSTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +314,7 @@
 				DEVELOPMENT_TEAM = NMC4QMEM2Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OAuth2iOSTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D85C1B02A9E568600994A77 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D85C1B12A9E568600994A77 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D85C1B02A9E568600994A77 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D85C1972A9E530100994A77 /* Project object */;
 }
